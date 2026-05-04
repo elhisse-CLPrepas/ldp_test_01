@@ -76,9 +76,9 @@ a {
 }
 
 .hero {
-  min-height: 78vh;
+  min-height: calc(100vh - 84px);
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 500px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 560px);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
   padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 72px);
@@ -185,7 +185,8 @@ h3 {
 
 .hero-image {
   width: 100%;
-  max-height: min(74vh, 720px);
+  height: auto;
+  max-height: calc(100vh - 150px);
   object-fit: contain;
   object-position: center;
   background: rgba(2, 10, 24, 0.72);
@@ -250,28 +251,48 @@ h3 {
 
 .poster-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 520px);
-  gap: clamp(24px, 5vw, 70px);
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 4vw, 46px);
+  justify-items: center;
   background: #eef5f6;
 }
 
+.poster-section .section-heading,
+.poster-frame {
+  width: min(100%, 1120px);
+}
+
 .poster-section .section-heading {
-  position: sticky;
-  top: 104px;
+  position: static;
+  text-align: center;
 }
 
 .poster-section p {
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--muted);
   font-size: 18px;
 }
 
-.poster-image {
-  width: 100%;
-  height: auto;
+.poster-frame {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: clamp(10px, 2vw, 18px);
+  background: var(--white);
+  border: 1px solid rgba(7, 20, 47, 0.14);
   border-radius: 8px;
-  border: 1px solid rgba(7, 20, 47, 0.16);
-  box-shadow: 0 26px 70px rgba(7, 20, 47, 0.22);
+  box-shadow: 0 26px 70px rgba(7, 20, 47, 0.18);
+}
+
+.poster-image {
+  width: min(100%, 860px);
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(7, 20, 47, 0.12);
 }
 
 .steps {
@@ -348,7 +369,16 @@ h3 {
     max-height: 620px;
   }
 
-  .poster-section .section-heading {
-    position: static;
+  .poster-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .poster-frame {
+    padding: 8px;
+  }
+
+  .poster-image {
+    width: 100%;
   }
 }

@@ -35,7 +35,32 @@ Dans GitHub :
 
 Le workflow `.github/workflows/deploy-pages.yml` publiera le site à chaque push sur `main`.
 
-## 4. Mettre à jour le site
+## 4. Déployer dans `public_html/ldp_FORMATION_ia`
+
+Pour un hébergement classique type cPanel/FTP, placer ces fichiers dans :
+
+```text
+public_html/ldp_FORMATION_ia/
+```
+
+Fichiers et dossiers à envoyer :
+
+```text
+index.html
+styles.css
+assets/
+.nojekyll
+```
+
+URL publique attendue :
+
+```text
+https://www.clprepas.com/ldp_FORMATION_ia/
+```
+
+Important : les chemins sont relatifs. Il ne faut pas ajouter de `/` devant `styles.css` ou `assets/...`, sinon le site cherchera les fichiers à la racine du domaine au lieu du dossier `ldp_FORMATION_ia`.
+
+## 5. Mettre à jour le site
 
 ```powershell
 git status
@@ -44,7 +69,7 @@ git commit -m "content: update landing page"
 git push
 ```
 
-## 5. Revenir a une version stable
+## 6. Revenir a une version stable
 
 Lister les versions :
 
