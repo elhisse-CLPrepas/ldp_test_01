@@ -52,15 +52,10 @@ a {
   gap: 12px;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  color: var(--blue-950);
-  background: var(--gold);
-  border-radius: 8px;
-  font-weight: 800;
+.brand-logo {
+  width: 74px;
+  height: 46px;
+  object-fit: contain;
 }
 
 .brand strong,
@@ -89,8 +84,8 @@ a {
   padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 72px);
   color: var(--white);
   background:
-    linear-gradient(115deg, rgba(7, 20, 47, 0.96), rgba(18, 61, 117, 0.88)),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80") center/cover;
+    radial-gradient(circle at 84% 20%, rgba(214, 167, 58, 0.22), transparent 26%),
+    linear-gradient(115deg, rgba(7, 20, 47, 0.98), rgba(18, 61, 117, 0.92));
 }
 
 .hero-content {
@@ -156,11 +151,13 @@ h3 {
   border: 1px solid transparent;
   border-radius: 8px;
   font-weight: 800;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .button.primary {
   color: var(--blue-950);
   background: var(--gold);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
 }
 
 .button.secondary {
@@ -168,12 +165,39 @@ h3 {
   border-color: rgba(255, 255, 255, 0.42);
 }
 
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible,
+.nav a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 4px;
+}
+
 .hero-panel {
   display: grid;
   gap: 16px;
 }
 
-.hero-panel div,
+.hero-image {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+.hero-points {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-points div,
 .card {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 8px;
@@ -181,7 +205,7 @@ h3 {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.hero-panel p {
+.hero-points p {
   margin-bottom: 0;
   color: #dce6f3;
 }
@@ -257,6 +281,10 @@ h3 {
   color: #dce6f3;
 }
 
+.contact-band .button.secondary {
+  color: var(--white);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -288,5 +316,17 @@ h3 {
 
   .hero {
     min-height: auto;
+  }
+
+  h1 {
+    font-size: clamp(38px, 12vw, 58px);
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-image {
+    max-height: 360px;
   }
 }

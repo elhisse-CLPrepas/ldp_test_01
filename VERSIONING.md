@@ -1,10 +1,10 @@
-# Systeme De Versionnage
+# Système De Versionnage
 
 ## Branches
 
-- `main` : version stable publiee sur le site.
-- `dev` : integration des prochaines modifications.
-- `feature/nom-court` : nouvelle section, nouveau contenu ou amelioration.
+- `main` : version stable publiée sur le site.
+- `dev` : intégration des prochaines modifications.
+- `feature/nom-court` : nouvelle section, nouveau contenu ou amélioration.
 - `fix/nom-court` : correction rapide.
 
 ## Versions
@@ -21,13 +21,13 @@ MAJOR.MINOR.PATCH
 
 Exemples :
 
-- `v1.0.0` : premiere version publique.
-- `v1.1.0` : ajout d'une section temoignages.
+- `v1.0.0` : première version publique.
+- `v1.1.0` : ajout d'une section témoignages.
 - `v1.1.1` : correction d'un lien de contact.
 
 ## Commits
 
-Convention recommandee :
+Convention recommandée :
 
 ```text
 type: message court
@@ -35,12 +35,12 @@ type: message court
 
 Types utiles :
 
-- `feat` : nouvelle fonctionnalite ou section.
+- `feat` : nouvelle fonctionnalité ou section.
 - `fix` : correction.
 - `content` : changement de texte.
 - `style` : changement visuel CSS.
 - `docs` : documentation.
-- `deploy` : configuration de deploiement.
+- `deploy` : configuration de déploiement.
 
 Exemples :
 

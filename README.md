@@ -1,30 +1,34 @@
 # LDP Easy
 
-Landing page statique pour presenter l'offre de formation en competences IA de CLPrepas.
+Landing page statique pour présenter l'offre de formation en compétences IA de CLPrepas.
 
 ## Contenu du pack
 
 - `index.html` : page principale du site.
 - `styles.css` : design responsive bleu, gold et nuances professionnelles.
-- `.github/workflows/deploy-pages.yml` : deploiement automatique vers GitHub Pages.
-- `VERSIONING.md` : systeme de versionnage et convention de commits.
-- `DEPLOYMENT.md` : procedure Git, GitHub et publication du site.
-- `CHECKLIST.md` : controles avant mise en ligne.
+- `.github/workflows/deploy-pages.yml` : déploiement automatique vers GitHub Pages.
+- `.nojekyll` : publication GitHub Pages sans transformation Jekyll.
+- `.gitattributes` : règles simples pour stabiliser les fins de ligne.
+- `VERSIONING.md` : système de versionnage et convention de commits.
+- `DEPLOYMENT.md` : procédure Git, GitHub et publication du site.
+- `CHECKLIST.md` : contrôles avant mise en ligne.
 
-## Lancer en local
+## Déployer en local
 
-Ouvrir `index.html` dans un navigateur.
-
-Pour tester avec un petit serveur local si Python est disponible :
+Depuis le dossier du projet :
 
 ```powershell
 python -m http.server 8080
 ```
 
-Puis ouvrir `http://localhost:8080`.
+URL locale :
+
+```text
+http://localhost:8080
+```
 
 ## Contact
 
 - Email : info@clprepas.com
 - Site : https://www.clprepas.com
-- Telephone : 0662605998
+- Téléphone : 0662605998

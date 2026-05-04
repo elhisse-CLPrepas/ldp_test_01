@@ -1,6 +1,6 @@
-# Deploiement Git, GitHub Et Site
+# Déploiement Git, GitHub Et Site
 
-## 1. Initialiser le depot local
+## 1. Initialiser le dépôt local
 
 ```powershell
 git init
@@ -8,15 +8,15 @@ git add .
 git commit -m "feat: add ldp easy landing pack"
 ```
 
-## 2. Creer le depot GitHub
+## 2. Créer le dépôt GitHub
 
 Sur GitHub :
 
-1. Creer un nouveau repository, par exemple `ldp-easy`.
-2. Ne pas ajouter de README depuis GitHub si le fichier existe deja localement.
+1. Créer un nouveau repository, par exemple `ldp-easy`.
+2. Ne pas ajouter de README depuis GitHub si le fichier existe déjà localement.
 3. Copier l'URL du repository.
 
-Puis connecter le depot local :
+Puis connecter le dépôt local :
 
 ```powershell
 git branch -M main
@@ -33,9 +33,9 @@ Dans GitHub :
 3. Dans `Build and deployment`, choisir `GitHub Actions`.
 4. Sauvegarder.
 
-Le workflow `.github/workflows/deploy-pages.yml` publiera le site a chaque push sur `main`.
+Le workflow `.github/workflows/deploy-pages.yml` publiera le site à chaque push sur `main`.
 
-## 4. Mettre a jour le site
+## 4. Mettre à jour le site
 
 ```powershell
 git status
@@ -58,7 +58,7 @@ Voir une version :
 git show v1.0.0
 ```
 
-Creer une branche depuis une version :
+Créer une branche depuis une version :
 
 ```powershell
 git checkout -b restore-v1 v1.0.0
