@@ -60,6 +60,25 @@ https://www.clprepas.com/ldp_FORMATION_ia/
 
 Important : les chemins sont relatifs. Il ne faut pas ajouter de `/` devant `styles.css` ou `assets/...`, sinon le site cherchera les fichiers à la racine du domaine au lieu du dossier `ldp_FORMATION_ia`.
 
+Pour préparer le même dossier en local :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy-local.ps1
+```
+
+Puis servir le dossier `public_html` sur le port autorisé :
+
+```powershell
+cd public_html
+py -m http.server 8080
+```
+
+URL locale :
+
+```text
+http://localhost:8080/ldp_FORMATION_ia/
+```
+
 ## 5. Mettre à jour le site
 
 ```powershell

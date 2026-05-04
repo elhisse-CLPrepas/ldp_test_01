@@ -20,13 +20,14 @@ Landing page statique pour présenter l'offre de formation en compétences IA de
 Depuis le dossier du projet :
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy-local.ps1
 py -m http.server 8080
 ```
 
 URL locale :
 
 ```text
-http://localhost:8080
+http://localhost:8080/ldp_FORMATION_ia/
 ```
 
 ## URL de production

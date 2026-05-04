@@ -21,3 +21,15 @@ Le site utilise uniquement des chemins relatifs :
 - `assets/hero-ia-strategie.png`
 
 Cela permet au site de fonctionner depuis un sous-dossier sans configuration supplémentaire.
+
+## Déploiement Local
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy-local.ps1
+```
+
+Le script synchronise les fichiers publics dans :
+
+```text
+public_html/ldp_FORMATION_ia
+```
