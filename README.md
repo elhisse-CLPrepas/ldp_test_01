@@ -6,6 +6,8 @@ Landing page statique pour présenter l'offre de formation en compétences IA de
 
 - `index.html` : page principale du site.
 - `styles.css` : design responsive bleu, gold et nuances professionnelles.
+- `assets/logo-clprepas.webp` : logo utilisé dans l'en-tête et comme icône.
+- `assets/hero-ia-strategie.png` : affiche intégrée dans le hero et la section expertise.
 - `.github/workflows/deploy-pages.yml` : déploiement automatique vers GitHub Pages.
 - `.nojekyll` : publication GitHub Pages sans transformation Jekyll.
 - `.gitattributes` : règles simples pour stabiliser les fins de ligne.
@@ -18,7 +20,7 @@ Landing page statique pour présenter l'offre de formation en compétences IA de
 Depuis le dossier du projet :
 
 ```powershell
-python -m http.server 8080
+py -m http.server 8080
 ```
 
 URL locale :

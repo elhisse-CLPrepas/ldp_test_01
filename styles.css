@@ -41,8 +41,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 16px clamp(20px, 5vw, 72px);
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--line);
+  background: rgba(7, 20, 47, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(10px);
 }
 
@@ -53,8 +53,8 @@ a {
 }
 
 .brand-logo {
-  width: 74px;
-  height: 46px;
+  width: 88px;
+  height: 52px;
   object-fit: contain;
 }
 
@@ -64,21 +64,21 @@ a {
 }
 
 .brand small {
-  color: var(--muted);
+  color: var(--gold-soft);
   font-size: 12px;
 }
 
 .nav {
   display: flex;
   gap: 18px;
-  color: var(--blue-950);
+  color: var(--white);
   font-weight: 700;
 }
 
 .hero {
   min-height: 78vh;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 390px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 500px);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
   padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 72px);
@@ -178,36 +178,27 @@ h3 {
 }
 
 .hero-panel {
-  display: grid;
-  gap: 16px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 .hero-image {
   width: 100%;
-  max-height: 430px;
-  object-fit: cover;
-  object-position: top center;
+  max-height: min(74vh, 720px);
+  object-fit: contain;
+  object-position: center;
+  background: rgba(2, 10, 24, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 8px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
 }
 
-.hero-points {
-  display: grid;
-  gap: 16px;
-}
-
-.hero-points div,
 .card {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 8px;
   padding: 22px;
   background: rgba(255, 255, 255, 0.1);
-}
-
-.hero-points p {
-  margin-bottom: 0;
-  color: #dce6f3;
 }
 
 .metric {
@@ -255,6 +246,32 @@ h3 {
   gap: clamp(24px, 5vw, 70px);
   align-items: start;
   background: var(--white);
+}
+
+.poster-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 520px);
+  gap: clamp(24px, 5vw, 70px);
+  align-items: start;
+  background: #eef5f6;
+}
+
+.poster-section .section-heading {
+  position: sticky;
+  top: 104px;
+}
+
+.poster-section p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(7, 20, 47, 0.16);
+  box-shadow: 0 26px 70px rgba(7, 20, 47, 0.22);
 }
 
 .steps {
@@ -310,6 +327,7 @@ h3 {
 
   .hero,
   .split,
+  .poster-section,
   .grid.three {
     grid-template-columns: 1fr;
   }
@@ -327,6 +345,10 @@ h3 {
   }
 
   .hero-image {
-    max-height: 360px;
+    max-height: 620px;
+  }
+
+  .poster-section .section-heading {
+    position: static;
   }
 }
